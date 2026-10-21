@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,6 +13,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -25,10 +30,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MeteoDenikTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = stringResource(R.string.autor),
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    MeteoObrazovka(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -36,23 +38,33 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.padding(16.dp)) {
+fun MeteoObrazovka(modifier: Modifier = Modifier) {
+    var zapsano by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
         Text(
-            text = stringResource(R.string.nadpis, name),
+            text = if (zapsano) {
+                stringResource(R.string.text_po_kliknuti)
+            } else {
+                stringResource(R.string.uvodni_text)
+            },
             color = MaterialTheme.colorScheme.primary,
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.titleLarge
         )
-        Button(onClick = { /* funkci dostane v dalších lekcích */ }) {
-            Text(text = stringResource(R.string.tlacitko_obnovit))
+
+        Button(onClick = { zapsano = true }) {
+            Text(text = stringResource(R.string.akce_zmen_text))
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun MeteoObrazovkaPreview() {
     MeteoDenikTheme {
-        Greeting(name = stringResource(R.string.autor))
+        MeteoObrazovka()
     }
 }
