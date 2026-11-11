@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather Diary</string>
+    <string name="uvodni_text">Weather diary — Martin Mega</string>
+    <string name="text_po_kliknuti">It was 21 °C and sunny today.</string>
+    <string name="akce_zmen_text">Record today\'s weather</string>
+    <string name="title_activity_detail_mesta">City detail</string>
+    <string name="mesto_nezname">Unknown city</string>
+    <string name="teplota_format">%1$.1f °C</string>
+    <string name="teplota_chybi">Temperature not available</string>
+
+    <!-- Location card -->
+    <string name="poloha_titulek">Weather where you are</string>
+    <string name="poloha_zjistit">Find my location</string>
+    <string name="poloha_vysvetleni">If you allow approximate location, Weather Diary shows the weather in the city you are in with a single tap – no need to look it up in the list. We read your location only at that moment and never send it anywhere.</string>
+    <string name="poloha_odmitnuto">You have not allowed location yet.</string>
+    <string name="poloha_pokracovat">Continue</string>
+    <string name="poloha_povolena">Location is allowed</string>
+    <string name="poloha_souradnice">Latitude %1$.4f°, longitude %2$.4f°</string>
+    <string name="poloha_neznama">Location is not available yet. Please try again in a moment.</string>
+    <string name="poloha_obnovit">Try again</string>
+    <string name="poloha_bez_opravneni">Everything else works without location permission – just pick your city from the list. You can allow location in Settings.</string>
+    <string name="otevrit_nastaveni">Open settings</string>
+
+    <!-- List title with count -->
+    <string name="seznam_titulek_pocet">My cities — %1$s</string>
+    <plurals name="pocet_zaznamu">
+        <item quantity="one">%1$d record</item>
+        <item quantity="other">%1$d records</item>
+    </plurals>
+
+    <!-- City detail (exercise 6.1) -->
+    <string name="detail_souhrn">It is %2$.1f °C in %1$s right now</string>
+</resources>

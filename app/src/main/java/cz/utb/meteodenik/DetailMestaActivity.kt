@@ -92,7 +92,8 @@ fun DetailObrazovka(mesto: String, teplota: Double, modifier: Modifier = Modifie
             text = if (teplota.isNaN()) {
                 stringResource(R.string.teplota_chybi)
             } else {
-                stringResource(R.string.teplota_format, teplota)
+                // Cvičení 6.1: jeden text se DVĚMA číslovanými parametry (%1$s, %2$.1f)
+                stringResource(R.string.detail_souhrn, mesto, teplota)
             },
             style = MaterialTheme.typography.titleLarge
         )

@@ -1,10 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MeteoDenik</string>
+    <string name="app_name">MeteoDeník</string>
     <string name="uvodni_text">Meteo deník — Martin Mega</string>
     <string name="text_po_kliknuti">Dnes bylo 21 °C a jasno.</string>
     <string name="akce_zmen_text">Zapsat dnešní počasí</string>
-    <string name="title_activity_detail_mesta">DetailMestaActivity</string>
+    <string name="title_activity_detail_mesta">Detail města</string>
     <string name="mesto_nezname">Neznámé město</string>
     <string name="teplota_format">%1$.1f °C</string>
     <string name="teplota_chybi">Teplota není k dispozici</string>
+
+    <!-- Karta polohy -->
+    <string name="poloha_titulek">Počasí tam, kde jste</string>
+    <string name="poloha_zjistit">Zjistit moji polohu</string>
+    <string name="poloha_vysvetleni">Když povolíte přibližnou polohu, MeteoDeník po jednom klepnutí ukáže počasí ve městě, kde právě jste – nemusíte ho hledat v seznamu. Polohu čteme jen v tu chvíli a nikam ji neposíláme.</string>
+    <string name="poloha_odmitnuto">Polohu jste zatím nepovolili.</string>
+    <string name="poloha_pokracovat">Pokračovat</string>
+    <string name="poloha_povolena">Poloha je povolena</string>
+    <string name="poloha_souradnice">Šířka %1$.4f°, délka %2$.4f°</string>
+    <string name="poloha_neznama">Poloha zatím není k dispozici. Zkuste to za chvíli znovu.</string>
+    <string name="poloha_obnovit">Načíst znovu</string>
+    <string name="poloha_bez_opravneni">Bez oprávnění k poloze funguje všechno ostatní – město si vyberete ze seznamu ručně. Polohu můžete povolit v Nastavení.</string>
+    <string name="otevrit_nastaveni">Otevřít nastavení</string>
+
+    <!-- Titulek seznamu s počtem -->
+    <string name="seznam_titulek_pocet">Moje města — %1$s</string>
+    <plurals name="pocet_zaznamu">
+        <item quantity="one">%1$d záznam</item>
+        <item quantity="few">%1$d záznamy</item>
+        <item quantity="many">%1$d záznamu</item>
+        <item quantity="other">%1$d záznamů</item>
+    </plurals>
+
+    <!-- Detail města (cvičení 6.1) -->
+    <string name="detail_souhrn">%1$s má právě %2$.1f °C</string>
 </resources>
