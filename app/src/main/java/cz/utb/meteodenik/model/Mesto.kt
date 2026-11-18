@@ -1,13 +1,7 @@
 package cz.utb.meteodenik.model
 
 data class Mesto(
+    val id: Int,
     val nazev: String,
-    val teplota: Double
-)
-
-
-val UKAZKOVA_MESTA = listOf(
-    Mesto("Zlín", 21.4),
-    Mesto("Brno", 23.1),
-    Mesto("Ostrava", 19.8)
+    val teplotaC: Double?   // null = teplotu ještě neznáme, doplní ji API v lekci 11
 )
